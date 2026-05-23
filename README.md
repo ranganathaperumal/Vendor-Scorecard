@@ -68,6 +68,9 @@ The operations intelligence layer. Contains:
 - **Cost Savings & Re-allocation Engine** — identifies shiftable trips, proposes lower-cost alternatives, and quantifies projected monthly savings
 
 ![Lane Insights](screenshots/page4_lane_insights.png)
+![Lane Insights](screenshots/page44_lane_insights.png)
+![Lane Insights](screenshots/page444_lane_insights.png)
+
 
 ---
 
