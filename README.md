@@ -1,28 +1,46 @@
-# 🏆 Vendor Performance Scorecard Dashboard
+# 🏆 Vendor Performance Scorecard — Analytics to Action
 
-> A fully interactive, multi-page **Google Apps Script + HTML/CSS/JS** web application that delivers end-to-end visibility into logistics vendor performance, lane-level operations, commercial benchmarking, and data-driven cost optimisation.
-
----
-
-## 📌 Project Overview
-
-Managing a large logistics network means tracking dozens — sometimes hundreds — of vendors across multiple routes, months, and performance dimensions simultaneously. Manual spreadsheets fall short.
-
-This dashboard was built to solve that problem: it pulls live data from Google Sheets, processes it entirely in the browser, and presents a comprehensive **5-page analytical cockpit** that enables procurement, operations, and vendor management teams to make faster, evidence-backed decisions.
+> *From raw operational data to boardroom-ready insights — this project covers the full cycle: building the intelligence layer, surfacing actionable findings, driving stakeholder conversations, and tracking real business outcomes.*
 
 ---
 
-## 🖥️ Dashboard Pages
+## 📌 What This Project Is Really About
+
+Most analytics work stops at the dashboard. This one doesn't.
+
+This Vendor Performance Scorecard was conceived, built, and operationalised as a **end-to-end analytics initiative** — not just a reporting tool. The objective was to move the organisation from gut-feel vendor decisions to a structured, data-backed vendor governance framework.
+
+The project spans three distinct phases:
+
+```
+Phase 1 — Build        →    Phase 2 — Insight        →    Phase 3 — Action
+─────────────────────       ──────────────────────────     ─────────────────────
+Design scoring logic        Surface what matters           Present to stakeholders
+Automate data pipeline      Identify risks & savings       Drive decisions
+Build live dashboard        Generate recommendations        Track outcomes
+```
+
+---
+
+## 🎯 Business Context
+
+Managing a logistics network with a large number of vendors across multiple lanes and asset types creates a core challenge: **how do you know which vendors deserve more business, which need intervention, and which are quietly costing you money?**
+
+Before this initiative, vendor reviews were periodic, manually compiled, and reactive. This project replaced that with a **always-on, self-refreshing scorecard** that answers those questions automatically — and more importantly, creates the foundation for structured vendor conversations backed by data rather than opinion.
+
+---
+
+## 🖥️ Dashboard — 5-Page Analytical Cockpit
 
 ### Page 1 — Category View
-Classifies vendors into performance tiers (A / B / C / D) based on monthly trip volume. Provides a cross-month count and trip-volume matrix, along with auto-generated **Category Insights** highlighting concentration risk, fragmentation, and top contributors.
+Vendors are automatically tiered into categories (A / B / C / D) based on monthly trip volume, giving the team an instant view of network concentration, fragmentation risk, and top contributors across months.
 
 ![Category View](page1_category_view.png)
 
 ---
 
 ### Page 2 — Detailed Scorecard Matrix
-Renders a vendor-by-vendor breakdown across **10 weighted KPIs**:
+Every vendor is scored across **10 operational KPIs** — each weighted to reflect business priority. The matrix makes performance gaps visible at a glance and auto-generates insights on top performers, bottom performers, and network-wide blind spots.
 
 | KPI | What it measures |
 |---|---|
@@ -42,42 +60,70 @@ Renders a vendor-by-vendor breakdown across **10 weighted KPIs**:
 ---
 
 ### Page 3 — Trends
-Tracks performance over time with:
-- **Total vs On-Time Trips** line chart (chronological trend)
-- **Score & Rank Trend Table** — every vendor's score and rank across all months side-by-side
-- **Vendor Rank Distribution** bar chart (Top 3 / Rank 4-10 / Rank 11-20 / Rank >20)
-- **Vendor Category Status** chart showing monthly category mix shifts
-- Auto-generated insights: network efficiency %, volume growth/decline, most-improved vendor
+Month-over-month performance tracking for every vendor — score movement, rank changes, category shifts, and network-level volume trends. The most-improved and most-declined vendors are automatically surfaced.
 
 ![Trends](page3_trends.png)
 
 ---
 
 ### Page 4 — Lane Insights
-The operations intelligence layer. Contains:
+The operations intelligence layer — where data meets decision-making.
 
-- **SOB (Share of Business) Allocation Proposals**
-- **Lane Performance Shifts (MoM)**
-- **Pareto Chart** — top lanes by delayed trips
-- **Vendor Risk vs. Reward Bubble Chart**
-- **Lane-Level Vendor Scorecard**
-- **Vendor Consistency & Recommendations**
-- **Cost Savings & Re-allocation Engine**
+- **SOB (Share of Business) Proposals** — data-backed recommendations on which vendors should receive more or less volume on which lanes
+- **Lane Performance Shifts** — MoM degradation flags, chronic underperformance alerts, volatility detection
+- **Cost Savings Engine** — automatically identifies lanes where volume reallocation to a better-ranked, lower-rate vendor yields measurable savings
+- **Vendor Consistency Tracker** — MoM trend sparklines with explicit Maintain / Propose SOB Increase / Review & Decrease recommendations
 
 ![Lane Insights](page4_lane_insights.png)
+![Cost Savings & Consistency](page44_lane_insights.png)
 
 ---
 
 ### Page 5 — Commercials
-The procurement and rate intelligence layer. Contains:
-
-- **Rate vs. Rank Competitiveness** scatter plot
-- **Cost vs. Performance Value Matrix** bubble chart
-- **Vendors Participating per Lane** bar chart
-- **Avg Rate by Vehicle Type** bar chart
-- **Commercial Vendor Master Table**
+Rate intelligence layer — benchmarks every vendor's rate against the L1 (lowest) rate on that lane, identifies high-variance lanes for negotiation, and maps cost vs. performance to find vendors who are expensive *and* underperforming.
 
 ![Commercials](page5_commercials.png)
+
+---
+
+## 📊 From Insight to Action — The Stakeholder Journey
+
+> *This is where the project moves beyond analytics.*
+
+The dashboard outputs were not left as self-serve reports. They were structured into a **monthly vendor review cadence** with relevant stakeholders — operations leads, procurement, and regional teams.
+
+### How insights were translated into conversations:
+
+**1. Pre-meeting preparation**
+Before each review, the scorecard was filtered to the relevant lane/region and key findings were extracted — top 3 risks, top 3 opportunities, and any cost savings identified by the reallocation engine.
+
+**2. Structured review format**
+Each vendor review followed a consistent structure driven by the dashboard:
+- Current score and rank vs. last month
+- Which KPI is pulling the score down and why
+- Lane-level OT% trend and consistency rating
+- SOB recommendation (increase / maintain / reduce) with data rationale
+
+**3. Action ownership**
+Every finding that required action was assigned an owner and a timeline during the review. The dashboard's recommendation column (Maintain / Propose SOB Inc. / Review & Decrease) served as the starting point for each conversation — giving stakeholders a data-backed proposal to react to rather than an open-ended discussion.
+
+**4. Outcome tracking**
+Where SOB reallocation was proposed and accepted, the cost savings engine's projections were tracked against actual spend in subsequent months to validate the model and build confidence in the framework.
+
+---
+
+## 💰 Business Value Delivered
+
+> *Numbers are indicative and direction-correct; specific figures are kept confidential.*
+
+| Outcome | How the dashboard enabled it |
+|---|---|
+| Identified monthly cost saving opportunities | Cost reallocation engine compared rates across vendors on same lanes and flagged shiftable volume |
+| Structured vendor governance cadence established | Monthly review rhythm created using scorecard outputs as the agenda |
+| Underperforming vendors flagged for improvement plans | Bottom-performer identification on Page 2 and MoM decline detection on Page 3 |
+| Top vendors rewarded with SOB increases | SOB Allocation Proposals on Page 4 used as basis for volume reallocation decisions |
+| Network blind spots addressed | Billing accuracy and spec adherence gaps surfaced across the fleet, feeding into process improvement conversations |
+| Reduced subjectivity in vendor conversations | Every decision point backed by a data trail rather than relationship bias |
 
 ---
 
@@ -85,50 +131,56 @@ The procurement and rate intelligence layer. Contains:
 
 | Layer | Technology |
 |---|---|
-| **Backend / Data** | Google Apps Script (server-side `getScorecardData()`) |
-| **Data Source** | Google Sheets (Scorecard, Lane Performance, Commercial Master tabs) |
-| **Frontend** | Vanilla HTML5 + JavaScript (ES6+) |
-| **Styling** | Tailwind CSS (CDN) |
-| **Charts** | Chart.js + chartjs-plugin-datalabels |
-| **Icons** | FontAwesome 6 |
-| **Hosting** | Google Apps Script Web App |
+| Backend / Data | Google Apps Script — server-side data fetch from Google Sheets |
+| Data Source | Google Sheets (Scorecard, Lane Performance, Commercial Master) |
+| Frontend | Vanilla HTML5 + JavaScript (ES6+) |
+| Styling | Tailwind CSS (CDN) |
+| Charts | Chart.js + chartjs-plugin-datalabels |
+| Icons | FontAwesome 6 |
+| Hosting | Google Apps Script Web App |
 
 ---
 
-## 🔑 Key Features
+## 🔑 Key Technical Features
 
-- **Live Data Refresh** — single-click refresh pulls latest data from Google Sheets
-- **Multi-Dimensional Filters** — 6–8 cascaded filters with multi-select dropdowns
-- **Cross-Chart Filtering** — clicking any chart element filters the entire dashboard
-- **Vendor Name Standardisation Engine** — normalises inconsistent vendor name spellings
-- **Dynamic Category Assignment** — vendor categories computed from trip volume thresholds
-- **Cost Savings Engine** — identifies lanes where volume can be shifted to save costs
-- **MoM Trend Sparklines** — per-vendor, per-lane month-over-month OT% trend
-- **Export Everything** — every table exports to Excel, every chart exports to CSV
-- **Sortable Tables** — every column in every table is click-sortable
-
----
-
-## 🛠️ Skills Demonstrated
-
-- **Data Engineering** — Multi-source data ingestion, normalisation, and join logic in JavaScript
-- **Business Intelligence** — KPI design, weighted scoring, vendor tiering, Pareto analysis
-- **Frontend Development** — Single-page application, Chart.js integration, responsive Tailwind layout
-- **Google Workspace Automation** — Apps Script backend, Sheets integration, Web App deployment
-- **UX Design** — Multi-level filtering, cross-chart interactivity, export functionality
+- **Live Data Refresh** — single-click pulls latest data without page reload
+- **Multi-Dimensional Filters** — 6–8 cascaded filters with multi-select, persisting across tab switches
+- **Cross-Chart Filtering** — clicking any chart element filters the entire dashboard instantly
+- **Vendor Name Standardisation Engine** — normalises inconsistent spellings across all three data sources
+- **Cost Savings Engine** — auto-identifies reallocation opportunities and quantifies projected monthly savings
+- **MoM Trend Sparklines** — per-vendor, per-lane trend rendered inline in the consistency table
+- **Export Everything** — every table to Excel (with formatting), every chart to CSV
+- **Sortable Tables** — every column, every table, click-sortable
 
 ---
 
-## 🔒 Data Privacy Note
+## 🛠️ Skills This Project Demonstrates
 
-All vendor names, route names, rates, and trip volumes are anonymised. No proprietary or confidential commercial data is included in this repository.
+| Skill Area | Specifics |
+|---|---|
+| **Analytics & BI** | KPI design, weighted scoring, vendor tiering, Pareto analysis, MoM trend detection |
+| **Business Acumen** | Translating data findings into stakeholder-ready recommendations and SOB proposals |
+| **Stakeholder Management** | Driving monthly review cadence, owning the data narrative in cross-functional reviews |
+| **Cost Optimisation** | Building and operationalising a reallocation savings engine with trackable outcomes |
+| **Cost & Rate Intelligence** | Lane-level cost variance analysis by vendor, trip type (One Way / Two Way), and vehicle type; L1 benchmark identification; premium-over-benchmark quantification per vendor per lane |
+| **Frontend Engineering** | Single-page app architecture, Chart.js, Tailwind CSS, responsive layout |
+| **Automation** | Google Apps Script backend, Sheets integration, Web App deployment |
+| **Communication** | Converting complex multi-dimensional data into clear, actionable business language |
+
+---
+
+## 🔒 Data Privacy
+
+All vendor names, route identifiers, rates, and operational metrics shown in screenshots are masked or anonymised. No proprietary or confidential commercial data is present in this repository.
 
 ---
 
 ## 👤 Author
 
-Built and maintained as part of logistics operations analytics work.
+Built, operationalised, and actively used to drive vendor governance decisions as part of logistics operations analytics work.
+
+*Open to questions, collaborations, or conversations about analytics-driven operations.*
 
 ---
 
-*Built with Google Apps Script · Chart.js · Tailwind CSS*
+*Built with Google Apps Script · Chart.js · Tailwind CSS · Google Sheets*
